@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Pustaks.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* Remove extra left and right margins, due to padding */
+        .row {
+            margin: 0 -5px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column">
+    <header class="header-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/website-name-logo.jpg" alt="bookstore logo" width="50" height="50"
+                                    class="d-inline-block align-text-top">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-dark" aria-current="page"
+                                            href="index.htm">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="offcanvas"
+                                            href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                            Categories
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#" data-toggle="tooltip"
+                                            data-placement="bottom"
+                                            title="You can check our Book Sets for gifting options!">Gift a Set</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-dark" data-toggle="tooltip"
+                                            data-placement="bottom"
+                                            title="If you can't find your book here, request one!">Request a Book</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input type="search" class="form-control"
+                                        placeholder="Title, Author, Publisher or ISBN" aria-label="Search"
+                                        style="width: 300px;">
+                                    <a href="#">
+                                        <img src="images/search-icon.png" alt="bookstore logo" width="54" height="53">
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-3 d-flex align-items-center justify-content-end">
+                    <ul class="list-inline m-0 position-relative">
+                        <li class="list-inline-item text-center">
+
+                            <a href="user-login.htm" style="cursor: pointer;">
+                                <span class="">
+                                    <img width="27" height="27" src="images/user-logo-1.png" alt="user-logo">
+                                </span>
+                                <span class="">My Account</span>
+                            </a>
+
+                        </li>
+                        <li class="list-inline-item position-relative">
+                            <a href="checkout.htm">
+                                <img alt="Cart Icon" src="images/cart.png" style="width: 30px; height: 30px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="d-flex flex-grow-1">
+        <main>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-pause="hover">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/bb-53.jpg" class="d-block" alt="thought image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/bb-23.jpg" class="d-block" alt="thought image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/bb-33.jpg" class="d-block" alt="thought image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/bb-13.jpeg" class="d-block" alt="thought image">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="background mt-2 mb-2 pt-2 pb-2" style="background-color: antiquewhite;">
+                <!--heading-->
+                <div class="row">
+                    <h2 class="text-center text-dark" style="width: 80%; padding: 0 15px;">
+                        <span><b>New Arrivals</b></span>
+                    </h2>
+                    <div class="float-left" style="width: 20%; padding: 0 25px; text-align: right;">
+                        <a href="#" class="seeallbtn">See All</a>
+                    </div>
+                </div>
+                <!--content-->
+                <div class="row">
+                    <div class="column">
+                        <div class="card border-warning h-100">
+                            <img src="images/common-yet-uncommon-book.jpg" class="card-img-top"
+                                alt="common yet uncommon cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">Common Yet Uncommon</h5>
+                                <p class="card-text">Sudha Murthy</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-0" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top"
+                                                            src="images/common-yet-uncommon-book.jpg"
+                                                            alt="common-yet-uncommon-book cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹303.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>Common Yet Uncommon</label></h2>
+                                                        <p>
+                                                            <label>By: Sudha Murty(Author) | </label>
+                                                            <label>Publisher: Penguin Random House
+                                                                India
+                                                                Pvt. Ltd | </label>
+                                                            <label>Released: 05 Mar 2024 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>Meet these people: Bundle Bindu, so named because he
+                                                                likes his truth with a little embellishment,
+                                                                Jayant the shopkeeper who doesn't make any profit, and
+                                                                Lunchbox Nalini, Sudha Murty herself,
+                                                                who brings her empty lunchbox-to be filled with
+                                                                food-wherever she goes! Written in Sudha Murty's
+                                                                inimitable style,
+                                                                Common Yet Uncommon is a heartwarming picture of
+                                                                everyday life and the foibles and quirks of ordinary
+                                                                people.
+                                                                In the fourteen tales that make up the collection, Sudha
+                                                                Murty delves into memories ...
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class=" btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-0">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-warning h-100">
+                            <img src="images/goldentouch.jpg" class="card-img-top" alt="The golden touch cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">The golden touch</h5>
+                                <p class="card-text">T.S. Kalyanaraman</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/goldentouch.jpg"
+                                                            alt="the golden touch cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹489.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>The Golden Touch</label></h2>
+                                                        <p>
+                                                            <label>By: T.S. Kalyanaraman(Author) | </label>
+                                                            <label>Publisher: Penguin Random House
+                                                                India
+                                                                Pvt. Ltd | </label>
+                                                            <label>Released: 09 Apr 2024 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>The Golden Touch lays out the extraordinary story of
+                                                                Kalyan Jewellers and the life of its founder, T.S.
+                                                                Kalyanaraman.
+                                                                It is the very personal account of a visionary with
+                                                                humble beginnings from T
+                                                                hrissur who set up one of the largest jewellery stores
+                                                                in the country--
+                                                                a Rs 17,000 crore behemoth employing over 8000 people.
+
+                                                                This captivating autobiography offers an intimate
+                                                                glimpse into the transformative moments that shaped the
+                                                                life of
+                                                                a remarkable individual who dared to dream big and ...
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-1">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-warning h-100">
+                            <img src="images/finding-the-oasis.png" class="card-img-top"
+                                alt="Finding the Oasis cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">Finding the Oasis</h5>
+                                <p class="card-text">Sandeep Mall</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/finding-the-oasis.png"
+                                                            alt="finding-the-oasis cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹205.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>Finding the Oasis</label></h2>
+                                                        <p>
+                                                            <label>By: Sandeep Mall(Author) | </label>
+                                                            <label>Publisher: Popular Prakashan Ltd. | </label>
+                                                            <label>Released: 01 Mar 2024 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>“Finding the Oasis” serves as a guiding light in this
+                                                                chaos. Deep health, as detailed in this book,
+                                                                isn't merely the lack of disease. It's a vibrant state
+                                                                of physical, mental and social well-being.
+                                                                It emphasises on the intersection of body, mind,
+                                                                emotions, environment and spirit.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-2">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-warning h-100">
+                            <img src="images/curse-of-the-pir.jpg" class="card-img-top"
+                                alt="Curse of the pir cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">Curse of the pir</h5>
+                                <p class="card-text">Anupama Pandey</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/curse-of-the-pir.jpg"
+                                                            alt="curse-of-the-pir cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹303.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>Curse Of The Pir</label></h2>
+                                                        <p>
+                                                            <label>By: Anupama Pandey(Author) | </label>
+                                                            <label>Publisher: Penguin Random House
+                                                                India
+                                                                Pvt. Ltd | </label>
+                                                            <label>Released: 06 Feb 2024 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>Rajveer is a regular guy with regular aspirations.
+                                                                His life's trajectory takes him to Jammu and Kashmir
+                                                                as a young assistant superintendent of police and from
+                                                                then on, it's a roller-coaster ride, as he tries to
+                                                                balance
+                                                                his professional and personal lives. As both go through
+                                                                many changes, what remains constant is his dedication to
+                                                                the
+                                                                elimination of terror outfits, particularly the
+                                                                Lashkar-e-Jabbar,
+                                                                whose members are focused on an all-out war against the
+                                                                nation.As the terror outfit intensifies it...
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-3">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-warning h-100">
+                            <img src="images/house-of-flame.jpg" class="card-img-top"
+                                alt="House of Flame and Shadow cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">House of Flame and Shadow</h5>
+                                <p class="card-text">Sarah J. Maas</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/house-of-flame.jpg"
+                                                            alt="House of Flame and Shadow cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹620.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>House of Flame and Shadow</label></h2>
+                                                        <p>
+                                                            <label>By: Sarah J. Maas(Author) | </label>
+                                                            <label>Publisher: Bloomsbury Publishing (UK) | </label>
+                                                            <label>Released: 30 Jan 2024 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>The stunning third book in the sexy,
+                                                                action-packed Crescent City series,
+                                                                following the global bestsellers House of Earth and
+                                                                Blood and House of Sky and Breath.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-4">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background mb-2 pt-2 pb-2" style="background-color: rgb(165, 190, 198);">
+                <!--heading-->
+                <div class="row">
+                    <h2 class="text-center text-dark" style="width: 80%; padding: 0 15px;">
+                        <span><b>Best Sellers</b></span>
+                    </h2>
+                    <div class="float-left" style="width: 20%; padding: 0 25px; text-align: right;">
+                        <a href="#" class="seeallbtn">See All</a>
+                    </div>
+                </div>
+                <!--content-->
+                <div class="row">
+                    <div class="column">
+                        <div class="card border-info h-100">
+                            <img src="images/autobiography-of-a-yogi.jpeg" class="card-img-top"
+                                alt="autobiography of a yogi cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">autobiography of a yogi</h5>
+                                <p class="card-text">Yogananda Paramahamsa</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-5" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top"
+                                                            src="images/autobiography-of-a-yogi.jpeg"
+                                                            alt="autobiography-of-a-yogi cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹108.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>Autobiography of a Yogi</label></h2>
+                                                        <p>
+                                                            <label>By: Yogananda Paramahamsa(Author) | </label>
+                                                            <label>Publisher: Yogoda Satsanga Society Of India |
+                                                            </label>
+                                                            <label>Released: 30 Jan 2010 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>Autobiography of a Yogi recounts his life and his
+                                                                encounters with spiritual figures of the
+                                                                Eastern and the Western world. The book begins with his
+                                                                childhood and family life,
+                                                                then finding his guru, becoming a monk and establishing
+                                                                his teachings of Kriya Yoga meditation.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-5">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-info h-100">
+                            <img src="images/atomic-habbits.jpeg" class="card-img-top" alt="Atomic Habits cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text">James Clear</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-6" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/atomic-habbits.jpeg"
+                                                            alt="atomic-habbits cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹620.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>Atomic Habits</label></h2>
+                                                        <p>
+                                                            <label>By: James Clear(Author) | </label>
+                                                            <label>Publisher: Penguin Random House
+                                                                India
+                                                                Pvt. Ltd | </label>
+                                                            <label>Released: 18 Oct 2018 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>THE PHENOMENAL INTERNATIONAL BESTSELLER - 1 MILLION
+                                                                COPIES SOLDTransform your life with tiny changes
+                                                                in behaviour - starting now.
+                                                                People think that when you want to change your life, you
+                                                                need to think big.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-6">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-info h-100">
+                            <img src="images/money-psychology.jpg" class="card-img-top"
+                                alt="The Psychology of Money cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">The Psychology of Money</h5>
+                                <p class="card-text">Morgan Housel</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-7" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/money-psychology.jpg"
+                                                            alt="money-psychology cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹303.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>The Psychology of Money</label></h2>
+                                                        <p>
+                                                            <label>By: Morgan Housel(Author) | </label>
+                                                            <label>Publisher: Jaico Publishing House | </label>
+                                                            <label>Released: 01 Sep 2020 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>Timeless lessons on wealth, greed, and happiness
+                                                                doing well with money isn?t necessarily about what you
+                                                                know.
+                                                                It?s about how you behave. And behavior is hard to
+                                                                teach, even to really smart people.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-7">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-info h-100">
+                            <img src="images/it-starts-with-us.jpg" class="card-img-top"
+                                alt="It Starts with Us cover page">
+                            <div class="card-body">
+                                <h5 class="card-title">It Starts with Us</h5>
+                                <p class="card-text">Colleen Hoover</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-8" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/it-starts-with-us.jpg"
+                                                            alt="it-starts-with-us cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹309.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>It Starts with Us</label></h2>
+                                                        <p>
+                                                            <label>By: Colleen Hoover(Author) | </label>
+                                                            <label>Publisher: Simon & Schuster Ltd. | </label>
+                                                            <label>Released: 06 Jul 2023 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>From the #1 New York Times bestselling author of It
+                                                                Starts with Us and All Your Perfects,
+                                                                a "brave and heartbreaking novel that digs its claws
+                                                                into you and doesn't let go,
+                                                                long after you've finished it" (Anna Todd, New York
+                                                                Times bestselling author) about a
+                                                                workaholic with a too-good-to-be-true romance can't stop
+                                                                thinking about her first love--
+                                                                soon to be a major motion picture starring Blake Lively
+                                                                and Justin Baldoni.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-8">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card border-info h-100">
+                            <img src="images/it-ends-with-us.jpg" class="card-img-top" alt="It Ends with Uscover page">
+                            <div class="card-body">
+                                <h5 class="card-title">It Ends with Us</h5>
+                                <p class="card-text">Colleen Hoover</p>
+
+                                <!-- Modal start-->
+                                <div class="modal fade" id="exampleModal-9" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <img class="card-img-top" src="images/it-ends-with-us.jpg"
+                                                            alt="it-ends-with-us cover page">
+                                                        <p></p>
+                                                        <p class="font-weight-bold"><label
+                                                                class="text-danger"><b>₹309.00</b></label></p>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h2><label>It Ends with Us</label></h2>
+                                                        <p>
+                                                            <label>By: Colleen Hoover(Author) | </label>
+                                                            <label>Publisher: Penguin Random House
+                                                                India
+                                                                Pvt. Ltd | </label>
+                                                            <label>Released: 02 Aug 2016 | </label>
+                                                            <label></label>
+                                                        </p>
+                                                        <p>
+                                                            <label>From the #1 New York Times bestselling author of It
+                                                                Starts with Us and All Your Perfects,
+                                                                a "brave and heartbreaking novel that digs its claws
+                                                                into you and doesn't let go,
+                                                                long after you've finished it" (Anna Todd, New York
+                                                                Times bestselling author) about a
+                                                                workaholic with a too-good-to-be-true romance can't stop
+                                                                thinking about her first love--
+                                                                soon to be a major motion picture starring Blake Lively
+                                                                and Justin Baldoni.
+                                                            </label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn border-success">Add to
+                                                    Wishlist</button>
+                                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Model end-->
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info border-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-9">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <footer class="pt-2 footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12 pl-0">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled text-center">
+                                <li class="list-inline-item"><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h5>Policies</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Privacy Policies</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>Help</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Return</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5>Misc</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled icons list-inline text-center">
+                        <li class="list-inline-item text-align-left"><a href="#" target="_blank"><img
+                                    src="images/fb-logo-1.png" alt="Facebook" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/x-logo.png"
+                                    alt="Twitter" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/pinterest-logo.png"
+                                    alt="Pinterest" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/YouTube-logo.png"
+                                    alt="Youtube" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/insta-logo.png"
+                                    alt="Instagram" width="32" height="32"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12  text-center text-danger copyrighttext mb-3">
+                    Copyright &copy; 2024. Pustaks.com <span class="allrightreserve">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--offcanvas content start-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="color: slategrey">Book Categories</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mb-3"><a class="dropdown-item" href="products.htm">Fiction</a></div>
+            <div class="mb-3"><a class="dropdown-item" href="products.htm">LifeStyle</a></div>
+            <div class="mb-3"><a class="dropdown-item" href="products.htm">Spiritual</a></div>
+            <div class="mb-3"><a class="dropdown-item" href="products.htm">Biographies</a></div>
+            <div class="mb-3"><a class="dropdown-item" href="products.htm">Children</a> </div>
+            <hr>
+            <div class="mb-3"><a class="dropdown-item text-dark" href="products.htm">Featured Authors</a></div>
+        </div>
+    </div>
+    <!--offcanvas content end-->
+
+</body>
+
+</html>

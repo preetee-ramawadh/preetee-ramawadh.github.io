@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <script src="scripts/validation.js"></script>
+    
+</head>
+
+<body class="body-background">
+
+    <header class="header-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/website-name-logo.jpg" alt="bookstore logo" width="50" height="50"
+                                    class="d-inline-block align-text-top">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-dark" aria-current="page" href="index.htm">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#" data-toggle="tooltip" data-placement="bottom"
+                                        title="You can check our Book Sets for gifting options!">Gift a Set</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#">Request a Book</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input type="search" class="form-control"
+                                        placeholder="Title, Author, Publisher or ISBN" aria-label="Search"
+                                        style="width: 300px;">
+                                    <a href="#">
+                                        <img src="images/search-icon.png" alt="bookstore logo" width="54" height="53">
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-3 d-flex align-items-center justify-content-end">
+                    <ul class="list-inline m-0 position-relative">
+                        <li class="list-inline-item text-center">
+
+                            <a href="user-login.htm" style="cursor: pointer;">
+                                <span class="">
+                                    <img width="27" height="27" src="images/user-logo-1.png" alt="user-logo">
+                                </span>
+                                <span class="">My Account</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item position-relative">
+                            <a href="checkout.htm">
+                                <img alt="Cart Icon" src="images/cart.png" style="width: 30px; height: 30px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid d-flex justify-content-center mt-3 p-3">
+        <form class="border rounded background p-3 m-3">
+            <div class="form-row rounded ">
+                <div class=" form-group col-sm-12 mb-3 text-center">
+                    <h3><i>Sign Up</i></h3>
+                </div>
+            </div>
+            <div class="form-group col-sm-12 mb-3">
+                <input type="text" name="username" id="username" placeholder="Name" class="col-12" required>
+            </div>
+            <div class=" form-group col-sm-12">
+                <input type="password" name="pswd" placeholder="Password" class="col-12" required id="pass1" onkeyup="checkPass(); return false;" >
+                <p class="form-text">Must be 8-20 characters long.</p>
+            </div>
+            <div class="form-group col-sm-12 mb-3">
+                <input type="password" name="cnf_pswd" placeholder="Confirm Password"
+                    class="col-sm-12" required id="pass2" onkeyup="checkPass(); return false;">
+            </div>
+            <div id="error-nwl"></div>
+            <div class="form-group col-sm-12 mb-3">
+                <input type="email" name="email" id="email" placeholder="Email" class="col-12" required>
+            </div>
+            <div class="form-group col-sm-12 mb-3">
+                <p>How did you hear about us?</p>
+            </div>
+            <div class="row">
+                <div class="form-group col-6 mb-3">
+                    <input type="radio" id="source-1" name="info_source" value="newspaper" class="form-check-input">
+                    <label for="source-1" class="form-check-label">Newspaper</label>
+                </div>
+                <div class="form-group col-6 mb-3">
+                    <input type="radio" id="source-2" name="info_source" value="social-media" class="form-check-input">
+                    <label for="source-2" class="form-check-label">Social Media</label>
+                </div>
+                <div class="form-group col-sm-6 mb-3">
+                    <input type="radio" id="source-3" name="info_source" value="employees" class="form-check-input">
+                    <label for="source-3" class="form-check-label">Our Website</label>
+                </div>
+                <div class="form-group col-sm-6 mb-3">
+                    <input type="radio" id="source-4" name="info_source" value="nowhere" class="form-check-input">
+                    <label for="source-4" class="form-check-label">Other</label>
+                </div>
+            </div>
+            <div class="form-group col-4 offset-4 mb-3">
+                <input type="submit" id="login" value="Register" class="btn btn-primary btn-lg">
+            </div>
+            <hr>
+            <div class="form-group col-sm-12 text-center mb-3">
+                <span>
+                    <a class="text-danger" href="user-login.htm">Existing user? Log in</a>
+                </span>
+            </div>
+        </form>
+    </div>
+    <footer class="pt-2 footer fixed-bottom">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12 pl-0">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled text-center">
+                                <li class="list-inline-item"><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h5>Policies</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Privacy Policies</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>Help</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Return</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5>Misc</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled icons list-inline text-center">
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/fb-logo-1.png"
+                                    alt="Facebook" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/x-logo.png"
+                                    alt="Twitter" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/pinterest-logo.png"
+                                    alt="Pinterest" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/YouTube-logo.png"
+                                    alt="Youtube" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/insta-logo.png"
+                                    alt="Instagram" width="32" height="32"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12  text-center text-danger copyrighttext mb-3">
+                    Copyright &copy; 2024. Pustaks.com <span class="allrightreserve">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

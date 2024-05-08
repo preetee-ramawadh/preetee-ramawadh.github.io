@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="body-background">
+
+    <header class="header-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/website-name-logo.jpg" alt="bookstore logo" width="50" height="50"
+                                    class="d-inline-block align-text-top">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-dark" aria-current="page" href="index.htm">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#" data-toggle="tooltip" data-placement="bottom"
+                                        title="You can check our Book Sets for gifting options!">Gift a Set</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#">Request a Book</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input type="search" class="form-control"
+                                        placeholder="Title, Author, Publisher or ISBN" aria-label="Search"
+                                        style="width: 300px;">
+                                    <a href="#">
+                                        <img src="images/search-icon.png" alt="bookstore logo" width="54" height="53">
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-3 d-flex align-items-center justify-content-end">
+                    <ul class="list-inline m-0 position-relative">
+                        <li class="list-inline-item text-center">
+
+                            <a href="user-login.htm" style="cursor: pointer;">
+                                <span class="">
+                                    <img width="27" height="27" src="images/user-logo-1.png" alt="user-logo">
+                                </span>
+                                <span class="">My Account</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item position-relative">
+                            <a href="checkout.htm">
+                                <img alt="Cart Icon" src="images/cart.png" style="width: 30px; height: 30px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid d-flex justify-content-center mt-3 p-3">
+            <form class="border rounded background p-3 m-3">
+                <div class="form-row rounded ">
+                    <div class=" form-group col-sm-12 mb-3 text-center">
+                        <h3><i>Checkout</i></h3>
+                    </div>
+                </div>
+                <div class="form-group col-sm-12 mb-3">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" class="col-12" required>
+                </div>
+                <div class="form-group col-sm-12 mb-3">
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" class="col-12" required>
+                </div>
+                <div class="form-group col-sm-12 mb-3">
+                    <input type="email" name="email" id="email" placeholder="Email" class="col-12" required>
+                </div>
+                <div class=" form-group col-sm-12 mb-3">
+                    <input type="text" name="address-1" placeholder="House/Flat No. Street" class="col-12" required>
+                </div>
+                <div class="form-group col-sm-12 mb-3">
+                    <input type="text" name="address-2" placeholder="Landmark" class="col-sm-12" required>
+                </div>
+                <div class="form-group col-sm-12 mb-3">
+                    <select class="form-select" id="state" required>
+                        <option value="">Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Karnataka</option>
+                        <option>Delhi</option>
+                    </select>
+                    <div class="invalid-feedback">Please provide a valid state.</div>
+                </div>
+                <div class="form-group col-sm-12 mb-3">
+                    <select class="form-select" id="country" required>
+                        <option value="">Select Country</option>
+                        <option>India</option>
+                        <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a valid country.</div>
+                </div>
+                <div class="col-sm-12 mb-3">
+                    <input type="text" class="form-control" id="zip" placeholder="Zip Code" required>
+                    <div class="invalid-feedback">Zip code required.</div>
+                </div>
+
+                <div class="form-check col-sm-12 mb-3">
+                    <input type="checkbox" class="form-check-input" id="same-address">
+                    <label class="form-check-label" for="same-address">Shipping address is the same as my
+                        billing address</label>
+                </div>
+                <hr>
+                <h4 class="mb-3">Payment</h4>
+                <div class="my-3">
+                    <div class="form-check">
+                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label class="form-check-label" for="credit">Credit card</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="debit">Debit card</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="paypal">PayPal</label>
+                    </div>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">Save this information for next time</label>
+                </div>
+                <div class="form-group col-4 offset-3 mb-3">
+                    <input type="submit" id="login" value="Continue to checkout" class="btn btn-primary btn-lg">
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="pt-2 footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12 pl-0">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled text-center">
+                                <li class="list-inline-item"><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h5>Policies</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Privacy Policies</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>Help</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Return</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2">
+                            <h5>Misc</h5>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled icons list-inline text-center">
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/fb-logo-1.png"
+                                    alt="Facebook" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/x-logo.png"
+                                    alt="Twitter" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/pinterest-logo.png"
+                                    alt="Pinterest" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/YouTube-logo.png"
+                                    alt="Youtube" width="32" height="32"></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><img src="images/insta-logo.png"
+                                    alt="Instagram" width="32" height="32"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12  text-center text-danger copyrighttext mb-3">
+                    Copyright &copy; 2024. Pustaks.com <span class="allrightreserve">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

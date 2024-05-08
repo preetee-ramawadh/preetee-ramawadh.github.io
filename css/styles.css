@@ -1,0 +1,66 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    padding-bottom: 192px;
+}
+h5 {
+    text-transform: capitalize;
+}
+
+main {
+    flex: 1;
+  }
+
+.body-background {
+    background-image: url(../images/books-library-shelves-lighting.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+    margin-bottom: 190px;
+}
+.header-bg {
+    background-color: #fbf9f9;
+}
+.background {
+    background-color: rgb(218, 199, 199);
+}
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 190px;
+    background-color: #fbf9f9;;
+    color: black;
+    text-align: center;
+}
+.carousel-inner>.carousel-item>img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    line-height: 1;
+    width: 100%;
+}
+
+.card_wrapper {
+background: linear-gradient(180deg, #23273A, 46.35% #FA4A6F 119.01%);
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+}
+
+/*Fixing image height on products page*/
+.img-height {
+    height: 224px;
+}
